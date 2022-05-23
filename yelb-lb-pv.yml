@@ -151,8 +151,13 @@ spec:
       - name: yelb-db
         image:  mreferre/yelb-db:0.5 #postgres
         env:
-        - name: PGDATA
-          value: /var/lib/postgresql/data/db-files/
+          - name: PGDATA
+            valueFrom:
+              configMapKeyRef:
+                name: db-config
+                key: pg_data
+        #- name: PGDATA
+          #value: /var/lib/postgresql/data/db-files/
         ports:
         - containerPort: 5432
 

@@ -2,4 +2,5 @@ namespace: yelb
 
 
 resources:
+  - db-config.yaml
   - yelb-lb-pv.yml
