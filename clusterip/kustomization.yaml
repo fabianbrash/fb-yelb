@@ -1,0 +1,5 @@
+namespace: yelb
+
+
+resources:
+  - yelb-no-lb-pv.yml
