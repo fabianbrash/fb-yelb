@@ -84,6 +84,10 @@ spec:
       containers:
       - name: yelb-ui
         image:  mreferre/yelb-ui:0.5
+        resources:
+          requests:
+            cpu: "200m"
+            memory: "100Mi"
         ports:
         - containerPort: 80
 ---
